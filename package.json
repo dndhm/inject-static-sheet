@@ -1,0 +1,51 @@
+{
+  "name": "inject-static-sheet",
+  "version": "0.1.0",
+  "description": "Wrapper for react-jss injectSheet providing deterministic className prefixing",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dndhm/inject-static-sheet.git"
+  },
+  "keywords": [
+    "react-jss"
+  ],
+  "author": "Dan Needham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dndhm/inject-static-sheet/issues"
+  },
+  "homepage": "https://github.com/dndhm/inject-static-sheet#readme",
+  "dependencies": {
+    "react-jss": "^8.3.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-jest": "^22.4.1",
+    "babel-plugin-tester": "^4.0.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.18.2",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jest": "^21.13.0",
+    "jest": "^22.4.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "scripts": {
+    "build": "babel src -d dist --ignore *.spec.js",
+    "lint": "eslint src",
+    "test": "jest"
+  }
+}
