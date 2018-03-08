@@ -11,6 +11,9 @@
     "url": "git+https://github.com/dndhm/inject-static-sheet.git"
   },
   "keywords": [
+    "react",
+    "jss",
+    "generateClassName",
     "react-jss"
   ],
   "author": "Dan Needham",
