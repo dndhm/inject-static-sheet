@@ -1,6 +1,6 @@
 ## Inject Static Sheet
 
-A wrapper for [https://github.com/cssinjs/react-jss](react-jss) `injectSheet`, resulting in deterministic className prefixing.
+A wrapper for [react-jss](https://github.com/cssinjs/react-jss) `injectSheet`, resulting in deterministic className prefixing.
 
 ### Usage
 Call `injectSheet` as usual, but pass an additional `prefix` argument. This will be used to fix the className prefix to a consistent string, rather than a generated hash of IDs which differ across environment (which is the default behaviour):
