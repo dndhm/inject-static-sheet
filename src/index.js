@@ -9,3 +9,5 @@ export default (styleSheet, prefix) => Component => injectSheet(styleSheet, {
 		},
 	}),
 })(Component);
+
+export { generateClassName };
