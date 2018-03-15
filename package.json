@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/dndhm/inject-static-sheet#readme",
   "dependencies": {
-    "react-jss": "^8.3.3"
+    "react-jss": "^8.3.5"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
