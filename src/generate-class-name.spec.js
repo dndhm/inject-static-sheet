@@ -7,7 +7,7 @@ describe('generateClassName', () => {
 		};
 		const sheet = {
 			options: {
-				classNamePrefix: 'Component-',
+				meta: 'Component, Unthemed, Static',
 			},
 		};
 		const expected = 'Component--className';
