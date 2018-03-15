@@ -1,10 +1,8 @@
 import injectSheet from 'react-jss';
 
 import injectStaticSheet from './';
-import generateClassName from './generate-class-name';
 
 jest.mock('react-jss', () => jest.fn().mockImplementation(() => jest.fn()));
-jest.mock('./generate-class-name', () => jest.fn());
 
 describe('injectStaticSheet', () => {
 	const styleSheet = {
@@ -15,10 +13,13 @@ describe('injectStaticSheet', () => {
 
 	injectStaticSheet(styleSheet, prefix)(Component);
 
-	test('should call react-jss with correct arguments', () => {
+
+	test('should call react-jss with replaced generateClassName option', () => {
 		const expected = [
 			styleSheet,
-			{ generateClassName },
+			{
+				generateClassName: expect.any(Function),
+			},
 		];
 		expect(injectSheet).toBeCalledWith(...expected);
 	});

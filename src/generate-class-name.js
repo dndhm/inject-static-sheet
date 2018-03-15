@@ -1,9 +1,12 @@
 export default (rule, {
 	options: {
+		classNamePrefix,
 		meta,
 	},
 }) => {
-	const prefix = `${meta.split(',')[0].replace('-', '')}--`;
+	const prefix = classNamePrefix
+		? `${classNamePrefix.replace('-', '')}`
+		: `${meta.split(',')[0]}`;
 
-	return `${prefix}${rule.key}`;
+	return `${prefix}--${rule.key}`;
 };
